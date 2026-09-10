@@ -1,0 +1,11 @@
+[package]
+name = "lorapress-bench"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lorapress-core = { path = "../lorapress-core" }
+flate2 = "1.0"
+zstd = "0.13"
+serde_json = "1.0"
+ciborium = "0.2"

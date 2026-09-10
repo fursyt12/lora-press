@@ -1,0 +1,16 @@
+[package]
+name = "lorapress-core"
+version = "0.1.0"
+edition = "2021"
+description = "High-efficiency payload compressor optimized for LoRa and Meshtastic networks"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+serde = { version = "1.0", default-features = false, features = ["alloc", "derive"], optional = true }
+serde_json = { version = "1.0", default-features = false, features = ["alloc"], optional = true }
+miniz_oxide = { version = "0.8", default-features = false, features = ["with-alloc"] }
+thiserror-no-std = "2.0"
+
+[features]
+default = ["std", "serde_json"]
+std = ["serde/std", "serde_json/std"]

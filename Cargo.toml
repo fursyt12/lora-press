@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "crates/lorapress-core",
+    "crates/lorapress-cli",
+    "crates/lorapress-bench",
+]
+resolver = "2"
