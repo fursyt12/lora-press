@@ -2,6 +2,16 @@
 name = "lorapress-cli"
 version = "0.1.0"
 edition = "2021"
+description = "Universal compression and decompression CLI for LoRa and Meshtastic"
+license = "MIT OR Apache-2.0"
+readme = "../../README.md"
+repository = "https://github.com/YOUR_USERNAME/lorapress"
+keywords = ["lora", "meshtastic", "compression", "cli"]
+categories = ["command-line-utilities", "compression"]
+
+[[bin]]
+name = "lorapress"
+path = "src/main.rs"
 
 [dependencies]
 lorapress-core = { path = "../lorapress-core" }

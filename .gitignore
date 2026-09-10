@@ -1,8 +1,21 @@
+# Cargo build artifacts
 /target/
-debug/
+
+# Rust backups and compiler crash logs
 *.rs.bk
-.idea/
-.vscode/
+rustc-ice-*.txt
 *.pdb
 mutants.out/
-rustc-ice-*.txt
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and local files
+*.log
+.env
+.env.*

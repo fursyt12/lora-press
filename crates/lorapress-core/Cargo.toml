@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 description = "High-efficiency payload compressor optimized for LoRa and Meshtastic networks"
 license = "MIT OR Apache-2.0"
+readme = "../../README.md"
+repository = "https://github.com/YOUR_USERNAME/lorapress"
+keywords = ["lora", "meshtastic", "compression", "embedded", "no-std"]
+categories = ["compression", "embedded", "wasm"]
 
 [dependencies]
 serde = { version = "1.0", default-features = false, features = ["alloc", "derive"], optional = true }
