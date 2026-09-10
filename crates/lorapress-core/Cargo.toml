@@ -1,11 +1,11 @@
 [package]
 name = "lorapress-core"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "High-efficiency payload compressor optimized for LoRa and Meshtastic networks"
 license = "MIT OR Apache-2.0"
 readme = "../../README.md"
-repository = "https://github.com/YOUR_USERNAME/lorapress"
+repository = "https://github.com/fursyt12/lora-press"
 keywords = ["lora", "meshtastic", "compression", "embedded", "no-std"]
 categories = ["compression", "embedded", "wasm"]
 

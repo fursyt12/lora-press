@@ -304,7 +304,7 @@ dependencies = [
 
 [[package]]
 name = "lorapress-cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap",
  "hex",
@@ -315,7 +315,7 @@ dependencies = [
 
 [[package]]
 name = "lorapress-core"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "miniz_oxide 0.8.9",
  "serde",
