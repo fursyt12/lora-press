@@ -124,7 +124,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             result.push(header.serialize());
             result.extend_from_slice(&comp_img);
 
-            let orig_raw_size = (size * size) as usize;
             let final_size = result.len();
             let airtime = mf.airtime_ms(final_size);
 

@@ -9,6 +9,7 @@ pub mod bitstream;
 pub mod detector;
 pub mod envelope;
 pub mod image;
+pub mod miren;
 pub mod structured;
 pub mod text;
 

@@ -31,6 +31,7 @@ Tested on real-world radio scenarios (SF9, BW 250 kHz, CR 4/5):
 | **IoT GPS & Telemetry JSON** | 61 B | 84 B *(+37%)* | 64 B *(+5%)* | **22 B** | `JsonCompact` | **-81.9 ms (-40.7%)** |
 | **Arbitrary Multi-Node JSON** | 235 B | 185 B | 171 B | **168 B** | `JsonDeflate` | **-153.6 ms (-30.0%)** |
 | **32x32 Map Icon / Schematic** | 128 B | 33 B | 17 B | **28 B** | `ImageCluster` | **-225.3 ms (-64.0%)** |
+| **Miren 5s 3D Avatar Circle (100 fr)** | 1657 B | 65 B | 47 B | **58 B** *(1 packet!)* | `MirenStream` | **-3635.2 ms (-96.5%)** |
 
 ---
 
@@ -41,6 +42,7 @@ Tested on real-world radio scenarios (SF9, BW 250 kHz, CR 4/5):
 * **Prefix-Free `TextMicro` Codec:** Cyrillic and Latin frequency tables with built-in radio slang codebook.
 * **`JsonCompact` Micro-Schema:** Fixed-point coordinate packing (1.1 cm GPS precision in 4 bytes) + sub-byte key mapping.
 * **Macro-Block Image Clustering:** 4x4 cluster compression for transmitting maps, sketches, and icons in a single 30–80 byte packet.
+* **Miren 3D Avatar & Video-Circle Channel Separation:** Dedicated codec for `miren` video messages (ARKit 52 blendshapes + Audio), squeezing a 5-second animated avatar into a single 58-byte packet!
 * **Physics-Accurate Airtime Engine:** Integrated Time-on-Air calculation for Meshtastic presets.
 
 ---

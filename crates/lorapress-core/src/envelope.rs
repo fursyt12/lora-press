@@ -12,7 +12,7 @@ pub enum PayloadType {
     JsonDeflate = 0x4,     // Arbitrary large JSON Deflate
     ImageCluster = 0x5,    // Cluster / QuadTree Block Image
     VoiceCodec2 = 0x6,     // Codec2 voice frames
-    Custom = 0x7,
+    MirenStream = 0x7,     // Miren ARKit 52 Blendshapes + Audio Stream
 }
 
 impl PayloadType {
@@ -25,7 +25,7 @@ impl PayloadType {
             0x4 => Ok(Self::JsonDeflate),
             0x5 => Ok(Self::ImageCluster),
             0x6 => Ok(Self::VoiceCodec2),
-            0x7 => Ok(Self::Custom),
+            0x7 => Ok(Self::MirenStream),
             _ => Err(Error::UnsupportedType),
         }
     }
@@ -92,6 +92,7 @@ mod tests {
             PayloadType::JsonDeflate,
             PayloadType::ImageCluster,
             PayloadType::VoiceCodec2,
+            PayloadType::MirenStream,
         ] {
             for sub in 0..4 {
                 let hdr = EnvelopeHeader::new(pt, sub);

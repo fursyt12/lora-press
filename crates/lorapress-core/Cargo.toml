@@ -1,12 +1,12 @@
 [package]
 name = "lorapress-core"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
-description = "High-efficiency payload compressor optimized for LoRa and Meshtastic networks"
+description = "High-efficiency payload compressor optimized for LoRa, Meshtastic and Miren 3D avatar streams"
 license = "MIT OR Apache-2.0"
 readme = "../../README.md"
 repository = "https://github.com/fursyt12/lora-press"
-keywords = ["lora", "meshtastic", "compression", "embedded", "no-std"]
+keywords = ["lora", "meshtastic", "miren", "compression", "no-std"]
 categories = ["compression", "embedded", "wasm"]
 
 [dependencies]

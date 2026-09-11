@@ -1,6 +1,6 @@
 [package]
 name = "lorapress-cli"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Universal compression and decompression CLI for LoRa and Meshtastic"
 license = "MIT OR Apache-2.0"
@@ -14,7 +14,7 @@ name = "lorapress"
 path = "src/main.rs"
 
 [dependencies]
-lorapress-core = { path = "../lorapress-core", version = "0.1.1" }
+lorapress-core = { path = "../lorapress-core", version = "0.1.2" }
 clap = { version = "4.5", features = ["derive"] }
 image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
 serde_json = "1.0"

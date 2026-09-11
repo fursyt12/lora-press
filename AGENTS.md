@@ -54,6 +54,7 @@ lorapress/
 | `0x4` | `JsonDeflate` | Arbitrary multi-node complex JSONs | -25% .. -40% |
 | `0x5` | `ImageCluster` | 32x32 to 64x64 1-bit monochrome maps / icons | -60% .. -80% |
 | `0x6` | `VoiceCodec2` | Ultra-low-bitrate speech (450 / 700 / 1200 bps) | ~100-200 bytes / 2 sec |
+| `0x7` | `MirenStream` | Miren 3D avatar & video-circle stream (ARKit 52) | -90% .. -96% |
 
 ---
 

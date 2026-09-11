@@ -3,6 +3,7 @@
 use alloc::vec::Vec;
 use crate::envelope::{EnvelopeHeader, PayloadType};
 use crate::image::ClusterImageCodec;
+use crate::miren::MirenStreamCodec;
 use crate::structured::CompactJsonCodec;
 use crate::text::TextCompressor;
 use crate::Error;
@@ -24,6 +25,13 @@ impl UniversalEngine {
     pub fn compress(input: &[u8]) -> (EnvelopeHeader, Vec<u8>) {
         if input.is_empty() {
             return (EnvelopeHeader::new(PayloadType::Raw, 0), Vec::new());
+        }
+
+        // Check if it's a Miren avatar / video stream ('MIRN')
+        if MirenStreamCodec::is_miren_stream(input) {
+            if let Ok(miren_comp) = MirenStreamCodec::compress_miren_stream(input) {
+                return (EnvelopeHeader::new(PayloadType::MirenStream, 0), miren_comp);
+            }
         }
 
         // Strategy Race: Run all relevant candidates and pick the smallest one
@@ -103,6 +111,9 @@ impl UniversalEngine {
                 // Return raw image bytes or bitmap representation
                 let (_w, _h, _pixels) = ClusterImageCodec::decode_4x4_clustered(payload)?;
                 Ok(payload.to_vec())
+            }
+            PayloadType::MirenStream => {
+                MirenStreamCodec::decompress_miren_stream(payload)
             }
             _ => Err(Error::UnsupportedType),
         }
